@@ -3,170 +3,66 @@
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="Generalized Attention-based Task-synergized Estimation in 3D" />
-    <meta name="keywords" content="Mono3D" />
+    <meta name="keywords" content="Mono3D, GATE3D, CVPR, CV4MR" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GATE3D : Generalized Attention-based Task-synergized Estimation in 3D</title>
+    <title>GATE3D: Generalized Attention-based Task-synergized Estimation in 3D</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag('js', new Date());
-
-      gtag('config', 'G-PYVRSFMDRL');
-    </script>
-
+    <!-- Fonts & Styles -->
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
-
     <link rel="stylesheet" href="./static/css/bulma.min.css" />
-    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
     <link rel="stylesheet" href="./static/css/index.css" />
-    <!-- <link rel="icon" href="./static/images/favicon.svg" /> -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>
-    <script src="./static/js/bulma-carousel.min.js"></script>
-    <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
   </head>
+
   <body>
-    <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
+    <!-- Hero section -->
     <section class="hero">
       <div class="hero-body">
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
+              <!-- Title -->
               <h1 class="title is-1 publication-title">
-                GATE3D : Generalized Attention-based Task-synergized Estimation in 3D
+                GATE3D: Generalized Attention-based Task-synergized Estimation in 3D
               </h1>
+
+              <!-- Authors -->
               <div class="is-size-5 publication-authors">
-                <!-- <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span> -->
+                <span class="author-block">Eunsoo Im<sup>1</sup>,</span>
+                <span class="author-block">Jung Kwon Lee<sup>1</sup>,</span>
+                <span class="author-block">Changhyun Jee<sup>1</sup></span>
+              </div>
+              <div class="is-size-6 publication-authors">
+                <span class="author-block"><sup>1</sup>Superb-AI, Korea</span>
+              </div>
+              <div class="is-size-6 has-text-centered">
+                <p>{eslim, jklee, chjee}@superb-ai.com</p>
               </div>
 
-              <div class="is-size-5 publication-authors">
-                <!-- <span class="author-block"><sup>1</sup>University of Washington,</span> -->
-                <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
-              </div>
-
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- PDF Link. -->
-                  <!-- <span class="link-block">
-                    <a
-                      href="https://arxiv.org/pdf/2011.12948"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a
-                      href="https://arxiv.org/abs/2011.12948"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span> -->
-                  <!-- Video Link. -->
-                  <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+              <!-- 줄인 로고 크기 -->
+              <div class="has-text-centered" style="margin-top: 1rem">
+                <a href="https://www.superb-ai.com" target="_blank">
+                  <img src="./static/images/CI_roundshape.png" alt="Superb AI Logo" style="max-width: 80px" />
                 </a>
-              </span> -->
-                  <!-- Code Link. -->
-                  <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+              </div>
+
+              <!-- Buttons (ArXiv only for now) -->
+              <div class="column has-text-centered" style="margin-top: 1rem">
+                <div class="buttons is-centered"></div>
+              </div>
+
+              <div class="column has-text-centered" style="margin-top: 1rem">
+                <p class="is-size-6" style="margin-bottom: 1rem">
+                  <em>Presented at CVPR 2025 Workshop on Computer Vision for Mixed Reality (CV4MR)</em>
+                </p>
+                <div class="buttons is-centered">
+                  <a href="https://arxiv.org/abs/2504.xxxxx" class="button is-dark is-rounded" target="_blank">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv(soon..)</span>
                   </a>
-              </span> -->
-                  <!-- Dataset Link. -->
-                  <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
                 </div>
               </div>
             </div>
@@ -175,20 +71,39 @@
       </div>
     </section>
 
-    <!-- <section class="hero teaser">
+    <!-- Abstract -->
+    <section class="section">
       <div class="container is-max-desktop">
-        <div class="hero-body">
-          <video id="teaser" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/teaser.mp4" type="video/mp4" />
-          </video>
-          <h2 class="subtitle has-text-centered">
-            <span class="dnerf">Gate</span> turns selfie videos from your phone into free-viewpoint portraits.
-          </h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                The emerging trend in computer vision emphasizes developing universal models capable of simultaneously
+                addressing multiple diverse tasks. Such universality typically requires joint training across
+                multi-domain datasets to ensure effective generalization. However, monocular 3D object detection
+                presents unique challenges in multi-domain training due to the scarcity of datasets annotated with
+                accurate 3D ground-truth labels, especially beyond typical road-based autonomous driving contexts.
+                To address this challenge, we introduce a novel weakly supervised framework leveraging pseudo-labels.
+                Current pretrained models often struggle to accurately detect pedestrians in non-road environments due
+                to inherent dataset biases. Unlike generalized image-based 2D object detection models, achieving similar
+                generalization in monocular 3D detection remains largely unexplored. In this paper, we propose GATE3D, a
+                novel framework designed specifically for generalized monocular 3D object detection via weak
+                supervision. GATE3D effectively bridges domain gaps by employing consistency losses between 2D and 3D
+                predictions. Remarkably, our model achieves competitive performance on the KITTI benchmark as well as on
+                an indoor-office dataset collected by us to evaluate the generalization capabilities of our framework.
+                Our results demonstrate that GATE3D significantly accelerates learning from limited annotated data
+                through effective pre-training strategies, highlighting substantial potential for broader impacts in
+                robotics, augmented reality, and virtual reality applications.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <section>
-      <h3 class="title is-3 has-text-centered">Demo : Unseen Images</h3>
+      <h3 class="title is-3 has-text-centered">Quantitative Results</h3>
+      <h6 class="title is-6 has-text-centered">Unseen Images</h6>
       <video autoplay loop muted playsinline style="max-height: 400px; width: auto; display: block; margin: 0 auto">
         <source src="./static/videos/5.mp4" type="video/mp4" />
       </video>
@@ -208,121 +123,72 @@
       </video>
     </section>
     <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                The emerging trend in computer vision emphasizes developing universal models capable of simultaneously
-                addressing multiple diverse tasks. Such universality typically requires joint training across
-                multi-domain datasets to ensure effective generalization. However, monocular 3D object detection
-                presents unique challenges in multi-domain training due to the scarcity of datasets annotated with
-                accurate 3D ground-truth labels, especially beyond typical road-based autonomous driving contexts.
-              </p>
-              <p>
-                To address this challenge, we introduce a novel weakly supervised framework leveraging pseudo-labels.
-                Current pretrained models often struggle to accurately detect pedestrians in non-road environments due
-                to inherent dataset biases. Unlike generalized image-based 2D object detection models, achieving similar
-                generalization in monocular 3D detection remains largely unexplored. In this paper, we propose GATE3D, a
-                novel framework designed specifically for generalized monocular 3D object detection via weak
-                supervision. GATE3D effectively bridges domain gaps by employing consistency losses between 2D and 3D
-                predictions. Remarkably, our model achieves competitive performance on the KITTI benchmark as well as on
-                an indoor-office dataset collected by us to evaluate the generalization capabilities of our framework.
-              </p>
-              <p>
-                Our results demonstrate that GATE3D significantly accelerates learning from limited annotated data
-                through effective pre-training strategies, highlighting substantial potential for broader impacts in
-                robotics, augmented reality, and virtual reality applications.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!--/ Abstract. -->
-
-        <!-- Paper video. -->
-        <!-- <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Video</h2>
-            <div class="publication-video">
-              <iframe
-                src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div> -->
-        <!--/ Paper video. -->
-      </div>
+      <div class="container is-max-desktop"></div>
     </section>
 
     <section class="section">
       <div class="container is-max-desktop">
         <!-- 제목은 columns 바깥! -->
-        <h3 class="title is-3 has-text-centered">KITTI Test Set</h3>
-
+        <h3 class="title is-3 has-text-centered">overview</h3>
         <!-- 이미지 1 -->
         <div class="has-text-centered" style="margin-bottom: 2rem">
           <figure class="image">
-            <img src="./static/images/car.png" alt="Scene A" style="max-width: 600px; margin: 0 auto" />
+            <img src="./static/images/overview.png" alt="Scene A" style="max-width: 800px; margin: 0 auto" />
           </figure>
-          <p class="is-size-6">Car</p>
+          <!-- <p class="is-size-6">overview</p> -->
+        </div>
+
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- 제목은 columns 바깥! -->
+        <h3 class="title is-3 has-text-centered">Experiments</h3>
+        <h6 class="title is-6 has-text-centered">KITTI Benchmark</h6>
+        <!-- 이미지 1 -->
+        <div class="has-text-centered" style="margin-bottom: 2rem">
+          <figure class="image">
+            <img src="./static/images/ex_car.png" alt="Scene A" style="max-width: 500px; margin: 0 auto" />
+          </figure>
+          <!-- <p class="is-size-6">Car</p> -->
         </div>
 
         <!-- 이미지 2 -->
         <div class="has-text-centered">
           <figure class="image">
-            <img src="./static/images/ped.png" alt="Scene B" style="max-width: 600px; margin: 0 auto" />
+            <img src="./static/images/ex_ped.png" alt="Scene B" style="max-width: 500px; margin: 0 auto" />
+          </figure>
+          <!-- <p class="is-size-6">Pedestrian</p> -->
+        </div>
+      </div>
+
+        <!-- 이미지 1 -->
+        <!-- <div class="has-text-centered" style="margin-bottom: 2rem">
+          <figure class="image">
+            <img src="./static/images/car.png" alt="Scene A" style="max-width: 500px; margin: 0 auto" />
+          </figure>
+          <p class="is-size-6">Car</p>
+        </div> -->
+
+        <!-- 이미지 2 -->
+        <!-- <div class="has-text-centered">
+          <figure class="image">
+            <img src="./static/images/ped.png" alt="Scene B" style="max-width: 500px; margin: 0 auto" />
           </figure>
           <p class="is-size-6">Pedestrian</p>
         </div>
+      </div> -->
+      <h6 class="title is-6 has-text-centered">office dataset</h6>
+        <!-- 이미지 1 -->
+        <div class="has-text-centered" style="margin-bottom: 2rem">
+          <figure class="image">
+            <img src="./static/images/ex_office.png" alt="Scene A" style="max-width: 500px; margin: 0 auto" />
+          </figure>
+          <!-- <p class="is-size-6">Person in Office</p> -->
+        </div>
+
+
       </div>
     </section>
-
-    <!-- <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
-      </div>
-    </section> -->
-
-    <!-- <footer class="footer">
-      <div class="container">
-        <div class="content has-text-centered">
-          <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div class="content">
-              <p>
-                This website is licensed under a
-                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
-                  >Creative Commons Attribution-ShareAlike 4.0 International License</a
-                >.
-              </p>
-              <p>
-                This means you are free to borrow the
-                <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website, we just ask that
-                you link back to this page in the footer. Please remember to remove the analytics code included in the
-                header of the website which you do not want on your website.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer> -->
   </body>
 </html>
