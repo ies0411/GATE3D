@@ -118,12 +118,42 @@
       <video autoplay loop muted playsinline style="max-height: 400px; width: auto; display: block; margin: 0 auto">
         <source src="./static/videos/4.mp4" type="video/mp4" />
       </video>
-      <video autoplay loop muted playsinline style="max-height: 400px; width: auto; display: block; margin: 0 auto">
         <source src="./static/videos/6.mp4" type="video/mp4" />
       </video>
+
     </section>
     <section class="section">
-      <div class="container is-max-desktop"></div>
+      <div class="container is-max-desktop">
+        <h3 class="title is-3 has-text-centered">
+          Metric‑scale fidelity in a novel environment
+        </h3>
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          style="max-height: 400px; width: auto; display: block; margin: 0 auto"
+        >
+          <source src="./static/videos/home_export.mp4" type="video/mp4" />
+        </video>
+
+        <!-- === 여기에 플롯 이미지 추가 === -->
+        <figure class="image" style="max-width: 600px; margin: 1.5rem auto;">
+          <img
+            src="./static/images/height_plot.png"
+            alt="Estimated heights over 300 frames in the novel sequence"
+          />
+          <figcaption class="has-text-centered is-size-7">
+            The qualitative snapshots and the quantitative height trace jointly demonstrate that
+            <em>GATE3D</em> retains physically consistent scale when applied to an unseen indoor scene,
+            confirming its reliability for downstream mixed-reality applications. Per-frame height estimates
+            for the same sequence indicate a ground-truth stature of <strong>1.73m</strong>, whereas
+            <em>GATE3D</em> yields a mean of <strong>1.721m</strong>, a median of
+            <strong>1.719 m</strong>, and a variance of <code>7.06&times; 10<sup>-3</sup>m<sup>2</sup></code>
+            (σ≈8.4cm) across 300 frames.
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="section">
