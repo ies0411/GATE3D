@@ -170,6 +170,18 @@
           </figure>
           <!-- <p class="is-size-6">overview</p> -->
         </div>
+        <div class="content has-text-justified">
+          <p>
+            GATE3D architecture overview. The proposed framework incorporates a DETR-style 3D detection backbone enhanced with
+            attention-based modules, and supports both fully and weakly supervised learning modes. For ground-truth-labeled samples, the model is
+            trained via standard 3D detection losses. For weakly labeled data, pseudo-3D annotations are generated from 2D detection, monocular
+            depth estimation, and orientation prediction. To mitigate label noise, we introduce a 2D–3D consistency loss that aligns projected 3D box
+            dimensions with frozen 2D predictions. Notably, during weak supervision, the 2D detector remains fixed to preserve its reliability, while
+            only the 3D decoder is optimized. This hybrid learning strategy improves robustness and generalization across diverse domains.
+
+          </p>
+        </div>
+      </div>
 
     </section>
 
